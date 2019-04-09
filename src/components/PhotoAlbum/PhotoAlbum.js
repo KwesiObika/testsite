@@ -57,7 +57,7 @@ class Album extends React.Component {
   }
   fileSelectHandler = event => {
     if(event.target.files[0]){
-      const pict = event.target.files[0];
+      const pict = event.target.files[0].name;
       this.setState({picture: pict});
     }
   }
@@ -71,7 +71,7 @@ class Album extends React.Component {
    })
   }
   upLoadImage = () => {
-    fire.database().ref('Pictures').push( this.state.picture ); // <- Send the message
+    fire.database().ref('Pictures').push(this.state.picture); // <- Send the message
     this.setState({
       picture: null
     }); // <- clear the input
