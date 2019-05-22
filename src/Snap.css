@@ -1,0 +1,36 @@
+.Snap {
+  text-align: center;
+
+}
+
+.Snap-logo {
+  animation: Snap-logo-spin infinite 7s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Snap-header {
+  background:url('./Static.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Snap-link {
+  color: #61dafb;
+}
+
+@keyframes Snap-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-365deg);
+  }
+}
